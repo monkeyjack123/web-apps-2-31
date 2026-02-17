@@ -6,6 +6,8 @@ Rails.application.routes.draw do
 
   resources "companies"
   # get("/companies", {:controller => "companies", :action => "index"})
+  # get("/companies/:id", {:controller => "companies", :action => "index"})
+  # post("/companies", {:controller => "companies", :action => "index"})
   resources "contacts"
   # get("/contacts", {:controller => "contacts", :action => "index"})
 

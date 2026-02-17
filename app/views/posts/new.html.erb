@@ -1,6 +1,22 @@
 <h1>New Post</h1>
 
-<form action="/posts" method="post">
-  <%# add form fields %>
-  <button>Submit</button>
-</form>
+<%= form_with(model: Post.new, url: "/posts") do |form| %>
+  <div>
+    <%= form.label :author %>
+    <%= form.text_field :author %>
+  </div>
+
+  <div>
+    <%= form.label :body %>
+    <%= form.text_area :body %>
+  </div>
+
+  <div>
+    <%= form.label :image %>
+    <%= form.text_field :image %>
+  </div>
+
+  <div>
+    <%= form.submit "Create Post" %>
+  </div>
+<% end %>
